@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/template.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <style>
       pre {
         background: none;
@@ -30,16 +32,6 @@
           <div class="container-fluid">
             <div class="row">
               <div class="main-avy col-xs-12">
-                <script>
-                  $(document).ready(function(){
-                    var avys=$('.avy');
-                    var count = avys.length;
-                    avys.hide();
-                    var select = Math.floor(Math.random() * (count - 1)) + 1
-                    $(avys[select]).show();
-                  });
-                </script>
-
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="221px" height="221px" viewBox="0 0 221 221" style="enable-background:new 0 0 221 221;" xml:space="preserve">
                   <style type="text/css">
@@ -162,6 +154,16 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+
+  <script>
+    $(document).ready(function(){
+      var avys=$('.avy');
+      var count = avys.length;
+      avys.hide();
+      var select = Math.floor(Math.random() * (count - 1)) + 1
+      $(avys[select]).show();
+    });
+  </script>
 
   </body>
 </html>
