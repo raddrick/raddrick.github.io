@@ -1,6 +1,15 @@
 .footer p {
   padding: 30px 5px 0 0;
 }
+@media (max-width: 480px) {
+  .head .raddstudio .motto h1 {
+    padding-top: 10px !important;
+    font-weight: 100;
+    color: #fff;
+    font-size: 1.5em !important;
+  }
+}
+
 @media (max-width: 768px) {
   .head {
     text-align: center;
@@ -25,10 +34,10 @@
     padding-top: 10px;
   }
   .head .raddstudio .motto h1 {
-    padding-top: 10px;
+    padding-top: 25px;
     font-weight: 100;
     color: #fff;
-    font-size: 80%;
+    font-size: 2.5em;
   }
   .footer {
     position: fixed;
@@ -130,6 +139,7 @@
 @screen-md: 992px;
 @screen-lg: 1200px;
 */
+
 @media (max-width: 768px) {
   .latest-posts {
     padding-bottom: 150px;
