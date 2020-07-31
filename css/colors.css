@@ -1,0 +1,30 @@
+/* CSS - Cascading Style Sheet */
+/* Palette color codes */
+/* Palette URL: http://paletton.com/#uid=34t1c0kllll2R26c5bJuAuXSvUI */
+
+/* Feel free to copy&paste color codes to your application */
+
+
+/* As hex codes */
+
+.color-primary-0 { color: #4B2D73 } /* Main Primary color */
+.color-primary-1 { color: #0B0A0B }
+.color-primary-2 { color: #33293F }
+.color-primary-3 { color: #5415A7 }
+.color-primary-4 { color: #6A05EF }
+
+.color-secondary-1-0 { color: #2D8632 } /* Main Secondary color (1) */
+.color-secondary-1-1 { color: #0C0D0C }
+.color-secondary-1-2 { color: #2E4930 }
+.color-secondary-1-3 { color: #09C215 }
+.color-secondary-1-4 { color: #00F410 }
+
+.color-secondary-2-0 { color: #AA6B39 } /* Main Secondary color (2) */
+.color-secondary-2-1 { color: #11100F }
+.color-secondary-2-2 { color: #5D4A3A }
+.color-secondary-2-3 { color: #F7740B }
+.color-secondary-2-4 { color: #FF7100 }
+
+.btn-default { background-color: #09C215 !important; }
+.btn-primary { background-color: #AA6B39 }
+.btn-secondary { background-color: #2D8632 }
