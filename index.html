@@ -146,12 +146,48 @@
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
-      gap: clamp(40px, 8vw, 110px);
-      align-items: center;
+      position: relative;
+      display: block;
       min-height: calc(100vh - 88px);
       padding-block: 72px;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: min(48vw, 620px);
+      background:
+        linear-gradient(
+          90deg,
+          var(--ink) 0%,
+          rgba(17, 17, 17, 0.82) 10%,
+          rgba(17, 17, 17, 0.20) 34%,
+          rgba(17, 17, 17, 0) 58%
+        ),
+        linear-gradient(
+          180deg,
+          var(--ink) 0%,
+          rgba(17, 17, 17, 0) 14%,
+          rgba(17, 17, 17, 0) 82%,
+          var(--ink) 100%
+        ),
+        url("/images/raddrick-hero.png");
+      background-repeat: no-repeat;
+      background-size: auto 92%;
+      background-position: left center;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero > div:first-child {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
     }
 
     .eyebrow,
@@ -218,73 +254,13 @@
       color: var(--accent-ink);
     }
 
-    .portrait-column {
-      position: relative;
-    }
 
 
-    .hero-art {
-      position: relative;
-      width: min(100%, 520px);
-      height: 100%;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      overflow: hidden;
-    }
 
-    .hero-art img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center bottom;
-      filter: drop-shadow(0 30px 70px rgba(0, 0, 0, 0.38));
-    }
     
-    .portrait-frame {
-      position: relative;
-      overflow: hidden;
-      aspect-ratio: 1;
-      border: 1px solid var(--line);
-      border-radius: 50%;
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.08), transparent),
-        var(--card);
-      box-shadow: var(--shadow);
-    }
 
-    .portrait-frame::before {
-      content: "";
-      position: absolute;
-      inset: 7%;
-      z-index: 2;
-      border: 1px dashed rgba(247, 147, 29, 0.5);
-      border-radius: 50%;
-      pointer-events: none;
-    }
 
-    .portrait {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: saturate(0.92) contrast(1.03);
-    }
 
-    .portrait-note {
-      position: absolute;
-      right: -10px;
-      bottom: 12%;
-      z-index: 3;
-      max-width: 200px;
-      padding: 12px 15px;
-      border-radius: 14px;
-      background: var(--paper);
-      color: var(--ink);
-      font-size: 0.82rem;
-      font-weight: 850;
-      transform: rotate(-3deg);
-      box-shadow: var(--shadow);
-    }
 
     .career-clock {
       display: grid;
@@ -532,7 +508,6 @@
     }
 
     @media (max-width: 840px) {
-      .hero,
       .section-head,
       .manifesto,
       .cta-inner {
@@ -545,10 +520,18 @@
 
       .hero {
         min-height: auto;
+        padding-bottom: 420px;
       }
 
-      .portrait-column {
-        max-width: 520px;
+      .hero::before {
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 410px;
+        background-size: auto 100%;
+        background-position: left bottom;
       }
 
       .project-grid {
@@ -583,10 +566,6 @@
 
       .career-clock {
         grid-template-columns: 1fr;
-      }
-
-      .portrait-note {
-        right: 0;
       }
 
       .footer {
@@ -683,17 +662,6 @@
         </div>
       </div>
 
-      <div class="portrait-column">
-        <div class="hero-art">
-          <img
-            src="/images/raddrick-hero.png"
-            alt="Rick Graham, Founder & Director of Radd Studio Inc."
-            width="1087"
-            height="1408"
-          >
-        </div>
-        <p class="portrait-note">Nothin' to it, but to do it.</p>
-      </div>
     </section>
 
     <section id="building">
