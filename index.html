@@ -222,6 +222,25 @@
       position: relative;
     }
 
+
+    .hero-art {
+      position: relative;
+      width: min(100%, 520px);
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+      filter: drop-shadow(0 30px 70px rgba(0, 0, 0, 0.38));
+    }
+    
     .portrait-frame {
       position: relative;
       overflow: hidden;
@@ -665,14 +684,12 @@
       </div>
 
       <div class="portrait-column">
-        <div class="portrait-frame">
+        <div class="hero-art">
           <img
-            class="portrait"
-            id="portrait"
-            src="/images/3D8A5279.png"
-            alt="Portrait of Rick Graham"
-            width="520"
-            height="520"
+            src="/images/raddrick-hero.png"
+            alt="Rick Graham, Founder & Director of Radd Studio Inc."
+            width="1087"
+            height="1408"
           >
         </div>
         <p class="portrait-note">Nothin' to it, but to do it.</p>
